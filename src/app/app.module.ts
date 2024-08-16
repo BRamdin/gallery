@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { AppHelloWorldComponent } from './app-hello-world/app-hello-world.component';
+import { RouterModule } from '@angular/router';
+import { routingTable } from './routes/app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GalleryComponent,
+    AppHelloWorldComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(routingTable)
   ],
   providers: [],
   bootstrap: [AppComponent]
